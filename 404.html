@@ -133,30 +133,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-        const validPaths = [
-            '/',
-            '/game',
-        ];
-
-        window.onload = function() {
-            const segments = window.location.pathname.split('/');
-            const repo = segments[1];
-            const path = '/' + segments.slice(2).join('/');
-            
-            if (validPaths.includes(path)) {
-                const params = window.location.search;
-                const hash = window.location.hash;
-                window.location.href = `/${repo}?path=${path}${params}${hash}`;
-            } else {
-                document.getElementById('install-prompt').style.display = 'block';
-                const gameId = segments[segments.length - 1];
-                if (gameId && gameId.length > 0) {
-                    document.getElementById('game-id').textContent = `Game #${gameId}`;
-                }
-            }
-        };
-    </script>
 </body>
 </html>
