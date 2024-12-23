@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": [
+          "48KAXPN8PP.com.example.pickupsportsapp"
+        ],
+        "paths": [ "/game/*" ]
+      }
+    ]
+  }
+}
