@@ -136,15 +136,16 @@
 </body>
 
 <script>
-    window.onload = function() {
-        const hash = window.location.hash;
-        const gameId = hash.split('/game/')[1];
+    const path = window.location.pathname;
+    const hash = window.location.hash;
+    if (path.includes('/game/')) {
+        const gameId = hash.split('/')[1];
         if (gameId) {
             window.location.replace(`pickupsports://game/${gameId}`);
             setTimeout(() => {
-                window.location.replace('https://apps.apple.com/your-app-store-id');
+                window.location.replace('https://apps.apple.com/app/id123');
             }, 500);
         }
     }
-</script>
+ </script>
 </html>
